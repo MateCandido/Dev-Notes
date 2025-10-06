@@ -1,0 +1,157 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Helvetica, sans-serif;
+}
+
+body {
+    background-color: #202124;
+    color: #fff;
+}
+
+header {
+    border-bottom: 1px solid #3c3c3f;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+#search-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+#search-input {
+    background-color: #525356;
+    border-radius: 5px;
+    border: none;
+    padding: 10px;
+    font-weight: bold;
+    color: #ddd;
+    width: 100%;
+    max-width: 400px;
+}
+
+#search-input::placeholder {
+    color: #ddd;
+}
+
+#export-notes {
+    background-color: #525356;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: 0.4s;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: bold;
+}
+
+#export-notes:hover {
+    background-color: #3c3c3f;
+}
+
+#add-note-container {
+    display: flex;
+    width: 90%;
+    max-width: 400px;
+    margin: 1rem auto 0;
+    gap: 1rem;
+}
+
+#note-content {
+    flex: 1;
+    background-color: transparent;
+    border: 1px solid #525356;
+    padding: 10px;
+    border-radius: 5px;
+    color: #fff;
+}
+
+.add-note {
+    cursor: pointer;
+    background-color: #525356;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    transition: 0.4s;
+}
+
+.add-note:hover {
+    background-color: #3c3c3f;
+}
+
+#notes-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    padding: 2rem;
+    gap: 2rem;
+}
+
+.note {
+    min-height: 200px;
+    padding: 1rem;
+    border: 1px solid #525356;
+    background-color: #202124;
+    border-radius: 10px;
+    color: #fff;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    transition: background-color 0.4s;
+}
+
+.note.fixed {
+    background-color: #3c3c3f;
+}
+
+.note textarea {
+    background-color: transparent;
+    resize: none;
+    color: #fff;
+    border: none;
+    height: 100%;
+    flex-grow: 1;
+    outline: none;
+    font-size: 1rem;
+}
+
+.note .icons {
+    display: flex;
+    gap: 0.5rem;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.note:hover .icons {
+    opacity: 1;
+}
+
+.note .icons i {
+    font-size: 1rem;
+    cursor: pointer;
+    background-color: #333;
+    padding: 8px;
+    border-radius: 50%;
+    transition: color 0.3s;
+}
+
+.note .icons i:hover {
+    color: #81d340;
+}
+
+.note .bi-pin.fixed {
+    color: #81d340;
+}
